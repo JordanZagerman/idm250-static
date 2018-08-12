@@ -1,0 +1,24 @@
+
+/* ABout Page */
+.about_picture {
+    max-width: 400px;
+}
+
+.about_text {
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+/* Homescreen icons */
+.homescreen_icons {
+    cursor: pointer;
+    max-width: 100px;
+}
+
+.homescreen_icons_images {
+    padding-left: 20px;
+}
+
+.homescreen_title_text{
+    color: white;
+}
