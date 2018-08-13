@@ -80,6 +80,7 @@ function makeWidget(icon, title, html, taskbar, ques, wid, hei, cusClass) { /* I
 	//return window_set;
 }
 
+
 function run(start) { // the run box
 	// toggle Start menu if launched from there
 	if(start == true) {
@@ -88,11 +89,17 @@ function run(start) { // the run box
 		});
 	}
 	//html code below
+	// Images
 	var sec1 = '<div id="win_wid_run_container"> <div id="win_wid_run_icondiv"> <img src="images/run_icon.png"> ';
+	// Text Line 1
 	var sec2 = '</div> <p id="win_wid_run_text"> Type the name of a program, folder, or document, and<br> ';
+	// Text Line 2
 	var sec3 = 'Windows will open it for you. </p> <p id="win_wid_run_opent"> <span class="win_underline">O';
+
 	var sec4 = '</span>pen: </p> <input type="text" id="win_wid_run_input" autofocus> <button id="win_wid_run_obutton" onClick="runOK()" disabled autofocus>';
+	// Buttons
 	var sec5 = 'OK</button> <button id="win_wid_run_cbutton" onClick="runCancel">Cancel</button> <button id="win_wid_run_bbutton" onClick="runBrowse()">';
+	// Browse
 	var sec6 = 'Browse...</button> </div>';
 	var widgetHTML = sec1 + sec2 + sec3 + sec4 + sec5 + sec6; // combine html code
 	// time to make the widgets...

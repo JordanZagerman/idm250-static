@@ -372,6 +372,8 @@ function deactivateAll() {
 }
 
 // WINDOW CENTERING FUNCTION
+// Change this for mobile
+// make this off center
 function windowCenter(num) {
 	var winID = "#window_" + num;
 	var winHeight = $( winID ).height();
@@ -387,4 +389,8 @@ function windowCenter(num) {
 	$( winID ).each(function() {
 		$(this).attr("style", $(this).attr("style") + winStyle);
 	});
+}
+
+function open() {
+	
 }

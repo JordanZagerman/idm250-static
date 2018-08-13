@@ -98,7 +98,7 @@
 					<u>S</u>ettings</span>
 			</div>
 			<!-- Find -->
-			<div id="win_start_tli_find" class="win_start_toplevel_item">
+			<div id="win_start_tli_find" class="win_start_toplevel_item" onClick="run(true)">
 				<img src="system/icons/find24.png" alt="Find" class="win_start_tliicon">
 				<span class="win_start_tlitext">
 					<u>F</u>ind</span>
@@ -110,7 +110,7 @@
 					<u>H</u>elp</span>
 			</div>
 			<!-- Run -->
-			<div id="win_start_tli_run" class="win_start_toplevel_item" onClick="run(true)">
+			<div id="win_start_tli_run" class="win_start_toplevel_item">
 				<img src="system/icons/run24.png" alt="Run..." class="win_start_tliicon">
 				<span class="win_start_tlitext">
 					<u>R</u>un...</span>
@@ -123,8 +123,8 @@
 			<!-- Shut Down -->
 			<div id="win_start_tli_shutdown" class="win_start_toplevel_item">
 				<img src="system/icons/shutdown24.png" alt="Shut Down..." class="win_start_tliicon">
-				<span class="win_start_tlitext">Sh
-					<u>u</u>t Down...</span>
+				<span class="win_start_tlitext">
+					<u>S</u>hut Down...</span>
 			</div>
 		</div>
 	</div>
@@ -134,7 +134,7 @@
 
 		<!-- Homescreen Shortcuts -->
 		<div class="icon_container">
-			<!-- makeWidget(icon, title, html, taskbar, ques, wid, hei, cusClass) -->
+			<!-- function makeWindow(icon, title, frameurl, taskbar, res, wid, hei) -->
 			<div class='homescreen_icons' onclick="makeWindow('system/icons/document_file.png', 'README.txt', 'pages/information_page.html', true);">
 				<img class="homescreen_icons_images" src="system/icons/README.png" id="win_start_icon" alt="About">
 				<p class="homescreen_title_text">README.txt</p>
