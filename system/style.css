@@ -1,5 +1,18 @@
+@font-face {
+    font-family: 'Consolas';
+    src: url('fonts/Consolas.woff2') format('woff2'), url('fonts/Consolas.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	border-width: 1px;
+	border-color: orange;
+	border-style: solid;
+}
 
 /* ABout Page */
+
 .about_picture {
     max-width: 400px;
 }
@@ -10,15 +23,32 @@
 }
 
 /* Homescreen icons */
+
 .homescreen_icons {
     cursor: pointer;
     max-width: 100px;
 }
 
 .homescreen_icons_images {
-    padding-left: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 48px;
+    width: 48px;
 }
 
-.homescreen_title_text{
+.homescreen_title_text {
     color: white;
+    font-family: 'Consolas';
+    text-align: center;
+
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .homescreen_icons_images {
+        padding-left: 20px;
+        height: 36px;
+        width: 36px;
+    }
 }

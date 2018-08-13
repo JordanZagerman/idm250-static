@@ -115,7 +115,7 @@ function run(start) { // the run box
 	function runCancel() {
 		windowClose(win_num);
 	}
-	function runBrowse {
+	function runBrowse() {
 		// this is just a placeholder for if/when we can browse for "executables"
 	}
 }

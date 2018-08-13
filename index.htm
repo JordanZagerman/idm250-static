@@ -3,6 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="system/icons/start.png">
 	<title>Jordan Zagerman's Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="system/win95.css">
@@ -22,8 +24,7 @@
 	<script src="system/clock.js"></script>
 </head>
 
-<body onload="updateClock(); setInterval('updateClock()', 1000 );
-	makeWindow('system/icons/document_file.png', 'README.txt', 'pages/information_page.html', true);">
+<body onload="updateClock(); setInterval('updateClock()', 1000 );">
 	<noscript>
 		<div class="bsod_container">
 			<div class="bsod_textcont">
@@ -132,21 +133,22 @@
 		<!-- This is here to provide a target for the window creation function -->
 
 		<!-- Homescreen Shortcuts -->
+		<!-- makeWidget(icon, title, html, taskbar, ques, wid, hei, cusClass) -->
 		<div class='homescreen_icons' onclick="makeWindow('system/icons/document_file.png', 'README.txt', 'pages/information_page.html', true);">
 			<img class="homescreen_icons_images" src="system/icons/README.png" id="win_start_icon" alt="About">
 			<p class="homescreen_title_text">README.txt</p>
 		</div>
-		<div class='homescreen_icons'>
+		<div class='homescreen_icons' onclick="makeWindow('system/icons/document_file.png', 'TESTING', 'tests/template.htm', true);">
 			<img class="homescreen_icons_images" src="system/icons/folder.png" id="win_start_icon" alt="Portfolio">
 			<p class="homescreen_title_text">Portfolio</p>
 		</div>
-		<div class='homescreen_icons'>
-			<img class="homescreen_icons_images" src="system/icons/recycle_bin_full.png" id="win_start_icon" alt="Archives">
+		<div class='homescreen_icons' onclick="makeWindow('system/icons/recycle_bin_full.png', 'Recycle Bin', 'pages/archive_page.html', true);">
+			<img class="homescreen_icons_images"  src="system/icons/recycle_bin_full.png" id="win_start_icon" alt="Archives">
 			<p class="homescreen_title_text">Recycle Bin</p>
 		</div>
 		<div class='homescreen_icons'>
-			<img class="homescreen_icons_images" src="system/icons/search_icon.png" id="win_start_icon" alt="Search">
-			<p class="homescreen_title_text">Search</p>
+			<img class="homescreen_icons_images" src="system/icons/find32.png" id="win_start_icon" alt="Find">
+			<p class="homescreen_title_text">Find</p>
 		</div>
 		<div class='homescreen_icons'>
 			<img class="homescreen_icons_images" src="system/icons/contact_icon.png" id="win_start_icon" alt="Contact">

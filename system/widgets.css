@@ -25,11 +25,6 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 }
 */
 
-* {
-	border-width: 1px;
-	border-color: purple;
-	border-style: solid;
-}
 .win_widget {
 	border-image-slice: 4 4 4 4;
 	border-image-width: 4px 4px 4px 4px;
