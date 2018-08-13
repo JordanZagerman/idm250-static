@@ -113,5 +113,6 @@
 .win_window_iframe {
 	width: 100%;
 	height: calc(100% - 18px);
-	border: none;	
+	border: none;
+	background-color: white;
 }
