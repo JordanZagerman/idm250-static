@@ -1,9 +1,44 @@
+/* @font-face {
+    font-family: 'Consolas';
+    src: url('fonts/Consolas-Bold.woff2') format('woff2'),
+        url('fonts/Consolas-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Consolas';
-    src: url('fonts/Consolas.woff2') format('woff2'), url('fonts/Consolas.woff') format('woff');
+    src: url('fonts/Consolas-Italic.woff2') format('woff2'),
+        url('fonts/Consolas-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+} */
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('fonts/Consolas.woff2') format('woff2'),
+        url('fonts/Consolas.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+/* @font-face {
+    font-family: 'Consolas';
+    src: url('fonts/Consolas-BoldItalic.woff2') format('woff2'),
+        url('fonts/Consolas-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('fonts/Consolas-Italic.woff2') format('woff2'),
+        url('fonts/Consolas-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+} */
+
+
 
 * {
 	border-width: 1px;
@@ -20,6 +55,17 @@
 .about_text {
     max-width: 90%;
     line-height: 1.5;
+}
+
+/* Contact Page */
+.contact_text {
+    font-family: 'Consolas';
+}
+
+/* Index Page */
+
+.window_unordered_list_item {
+    font-family: 'Consolas';
 }
 
 /* Homescreen icons */
@@ -54,9 +100,11 @@
 
 @media only screen and (max-width: 600px) {
     .homescreen_icons_images {
-        padding-left: 20px;
         height: 36px;
         width: 36px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .icon_container {

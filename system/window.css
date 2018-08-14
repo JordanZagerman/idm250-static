@@ -64,7 +64,7 @@
 }
 .win_titb_text {
 	position: absolute;
-	font-family: "Microsoft Sans Serif";
+	font-family: 'Consolas';
 	font-size: 8pt;
 	font-weight: bold;
 	left: 20px;

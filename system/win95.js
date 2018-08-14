@@ -173,7 +173,12 @@ $( document ).ready(function(){
 	});
 });
 
-
+// $(function(){
+// 	$('.app').draggable({ handle: '.titlebar' });
+// 	$('.app').click(function() {
+// 		$('.app').removeClass('active');
+// 		$(this).addClass('active');
+// 	});
 // WINDOW CREATION FUNCTION
 function makeWindow(icon, title, frameurl, taskbar, res, wid, hei) { /* IT WORKS!!! What's the catch? */
 	window_set++;
@@ -392,5 +397,5 @@ function windowCenter(num) {
 }
 
 function open() {
-	
+
 }
