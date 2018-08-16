@@ -115,7 +115,7 @@ function run(start) { // the run box
 	var sec6 = 'Browse...</button> </div>';
 	var widgetHTML = sec1 + sec2 + sec3 + sec4 + sec5 + sec6; // combine html code
 	// time to make the widgets...
-	makeWidget(false, 'Run', widgetHTML, false, false, false, false, 340, 140, 'win_wid_run_dialog');
+	makeWidget(false, 'Find', widgetHTML, false, false, false, false, 340, 140, 'win_wid_run_dialog');
 	$('#win_wid_run_input').focus();
 	// set "open" button active and inactive based on input value
 	$('#win_wid_run_input').on('input', function () {

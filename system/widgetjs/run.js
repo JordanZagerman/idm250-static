@@ -15,5 +15,6 @@ function aliasRun(rawCommand) {
 	
 	} else {
 		// put file not found error dialog js here
+		makeWindow('system/icons/find24.png', 'Find', 'pages/search_results_page.html', true);
 	}
 }

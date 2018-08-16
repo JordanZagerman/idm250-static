@@ -5,14 +5,14 @@
     font-style: normal;
 }
 
-/*
+
 @font-face {
     font-family: 'Consolas';
     src: url('fonts/Consolas-Italic.woff2') format('woff2'),
         url('fonts/Consolas-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-} */
+}
 
 @font-face {
     font-family: 'Consolas';
@@ -37,11 +37,11 @@
     font-style: italic;
 } */
 
-/* * {
+* {
     border-width: 1px;
     border-color: orange;
     border-style: solid;
-} */
+}
 
 /* ABout Page */
 
@@ -72,6 +72,37 @@
     font-weight: bold;
     font-style: normal;
     text-align: center;
+
+}
+
+.page_heading_4 {
+    font-family: 'Consolas';
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+}
+
+.project_sub_heading {
+    max-width: 600px;
+    line-height: 1.3;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Project Page  */
+.project_picture {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+.project_image_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 /* Contact Page */
@@ -128,5 +159,8 @@
         display: grid;
         grid-template-columns: 150px 150px;
     }
-    #win_container {}
+
+    .project_image_container {
+        grid-template-columns: auto auto;
+    }
 }
