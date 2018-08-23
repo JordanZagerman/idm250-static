@@ -5,7 +5,6 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'Consolas';
     src: url('fonts/Consolas-Italic.woff2') format('woff2'),
@@ -37,10 +36,15 @@
     font-style: italic;
 } */
 
-* {
+/* * {
     border-width: 1px;
     border-color: orange;
     border-style: solid;
+} */
+
+.home_link {
+    margin: 0;
+    padding: 0;
 }
 
 /* ABout Page */

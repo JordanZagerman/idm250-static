@@ -27,6 +27,8 @@ $(document).ready(function () {
 });
 
 function makeWidget(icon, title, html, taskbar, min, ques, center, wid, hei, cusClass) { /* IT WORKS!!! What's the catch? */
+	console.log("Widget created");
+
 	window_set++;
 	// Add titlebar height to window height
 	var winHeight = hei + titbHeight;
@@ -86,6 +88,39 @@ function makeWidget(icon, title, html, taskbar, min, ques, center, wid, hei, cus
 	if (center == true) {
 		windowCenter(window_set);
 	}
+}
+
+function runHome() { // the run box
+	// toggle Start menu if launched from there
+	// add in the run.js include into <head>
+	var runJsLink = $("<script src='system/widgetjs/run.js'>");
+	$("head").append(runJsLink);
+	//html code below
+	// Images
+	var sec1 = '<div class="win_wid_run_tgt"></div><div id="win_wid_run_container"> <div id="win_wid_run_icondiv"> <img src="system/icons/find32.png"> ';
+	// Text Line 1
+	var sec2 = '</div> <p id="win_wid_run_text"> Type the name of a program, folder, or document, and<br> ';
+	// Text Line 2
+	// Open
+	var sec3 = 'Windows will open it for you. </p> <p id="win_wid_run_opent"> <span class="win_underline">F';
+	var sec4 = '</span>ind: </p> <input type="text" id="win_wid_run_input" autofocus> <button id="win_wid_run_obutton" onClick="runOK()" disabled autofocus>';
+	// Buttons
+	var sec5 = 'OK</button> <button class="win_wid_run_cbutton" id="test" onClick="runCancel()">Cancel</button> <button class="win_wid_run_bbutton" onClick="runBrowse()">';
+	// Browse
+	var sec6 = 'Browse...</button> </div>';
+	var widgetHTML = sec1 + sec2 + sec3 + sec4 + sec5 + sec6; // combine html code
+	// time to make the widgets...
+	makeWidget(false, 'Find', widgetHTML, false, false, false, false, 340, 140, 'win_wid_run_dialog');
+	$('#win_wid_run_input').focus();
+	// set "open" button active and inactive based on input value
+	$('#win_wid_run_input').on('input', function () {
+		var tbVal = $('#win_wid_run_input').val();
+		if (tbVal.length > 0) { // input != empty
+			$('#win_wid_run_obutton').removeAttr('disabled');
+		} else { // input is empty
+			$('#win_wid_run_obutton').prop('disabled', true);
+		}
+	});
 }
 
 function run(start) { // the run box
@@ -172,8 +207,9 @@ function closeWinver() {
 
 // ERROR MESSAGE FUNCTION
 function windowsError(icon, title, msg) {
+	console.log("Error Window Created")
 	if (icon == 1) {
-		var iconURL = "icons/dialogs/error.png";
+		var iconURL = "system/icons/dialogs/error.png";
 	}
 	var sec1 = '<div class="win_wid_error_tgt"></div><div class="win_wid_error_container">';
 	var sec2 = '<div class="win_wid_error_concont"><div class="win_wid_error_icondiv"><img src="';
@@ -183,7 +219,13 @@ function windowsError(icon, title, msg) {
 	var sec4 = '</p></div><p class="win_wid_error_buttoncont">';
 	var sec5 = '<button class="win_wid_error_close" onclick="errorClose()">OK</button></p></div>';
 	var errorHTML = sec1 + sec2 + iconURL + sec3 + msg + sec4 + sec5;
+	// makeWidget(icon, title, html, taskbar, min, ques, center, wid, hei, cusClass)
 	makeWidget(false, title, errorHTML, false, false, false, true, 340, 140, "win_wid_error_dialog");
+}
+
+function windowsErrorLoop() {
+	var randomNumber = Math.floor(Math.random() * 100);
+	windowsError(true, 404, 'Page not found');	
 }
 
 function errorClose() {

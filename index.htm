@@ -122,7 +122,7 @@
 				<div class="win_start_d2"></div>
 			</div>
 			<!-- Shut Down -->
-			<div id="win_start_tli_shutdown" class="win_start_toplevel_item">
+			<div id="win_start_tli_shutdown" class="win_start_toplevel_item" onclick="windowsError(true, 404, 'Page not found');">
 				<img src="system/icons/shutdown24.png" alt="Shut Down..." class="win_start_tliicon">
 				<span class="win_start_tlitext">
 					<u>S</u>hut Down...</span>
@@ -148,7 +148,7 @@
 				<img class="homescreen_icons_images" src="system/icons/recycle_bin_full.png" id="win_start_icon" alt="Archives">
 				<p class="homescreen_title_text">Recycle Bin</p>
 			</div>
-			<div class='homescreen_icons'onClick="run(true)">
+			<div class='homescreen_icons' onClick="runHome()">
 				<img class="homescreen_icons_images" src="system/icons/find32.png" id="win_start_icon" alt="Find">
 				<p class="homescreen_title_text">Find</p>
 			</div>
@@ -157,7 +157,9 @@
 				<p class="homescreen_title_text">Contact</p>
 			</div>
 			<div class='homescreen_icons'>
-				<img class="homescreen_icons_images" src="system/icons/resume.png" id="win_start_icon" alt="Resume" onclick="document.open()">
+				<a class="home_link" href="system/download/resume.pdf" download>
+					<img class="homescreen_icons_images" src="system/icons/resume.png" id="win_start_icon" alt="Resume">
+				</a>
 				<p class="homescreen_title_text">Resume</p>
 			</div>
 		</div>

@@ -25,6 +25,13 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 }
 */
 
+@font-face {
+	font-family: 'Consolas';
+	src: url('fonts/Consolas.woff2') format('woff2'), url('fonts/Consolas.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .win_widget {
 	border-image-slice: 4 4 4 4;
 	border-image-width: 4px 4px 4px 4px;
@@ -32,34 +39,41 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	border-image-repeat: stretch stretch;
 	border-image-source: url("images/border.png");
 	/*display: none;*/
-	position: absolute !important; /* must be important because jQuery UI will set it to rel and bad things will happen */
+	position: absolute !important;
+	/* must be important because jQuery UI will set it to rel and bad things will happen */
 }
+
 /* THE RUN DIALOG */
+
 .win_wid_run_dialog {
 	/*left: 8px !important;
 	bottom: 8px !important;*/
-	position: absolute !important;	
+	position: absolute !important;
 	border-image-slice: 4 4 4 4;
 	border-image-width: 4px 4px 4px 4px;
 	border-image-outset: 4px 4px 4px 4px;
 	border-image-repeat: stretch stretch;
 	border-image-source: url("images/border.png");
 	/*display: none;*/
-	position: absolute !important; /* must be important because jQuery UI will set it to rel and bad things will happen */
+	position: absolute !important;
+	/* must be important because jQuery UI will set it to rel and bad things will happen */
 	left: 8px;
 	bottom: 8px !important;
 	padding: 0px;
 }
+
 #win_wid_run_tgt {
 	width: 0px;
 	height: 0px;
 }
+
 #win_wid_run_container {
 	width: 100%;
 	height: 100%;
 	background-color: #C0C0C0;
 	cursor: default;
 }
+
 #win_wid_run_icondiv {
 	width: 32px;
 	height: 32px;
@@ -67,6 +81,7 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	top: 19px;
 	left: 12px;
 }
+
 #win_wid_run_text {
 	font-family: "Microsoft Sans Serif";
 	font-size: 8pt;
@@ -74,6 +89,7 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	left: 52px;
 	top: 9px;
 }
+
 #win_wid_run_opent {
 	position: absolute;
 	font-family: "Microsoft Sans Serif";
@@ -81,12 +97,14 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	top: 59px;
 	left: 12px;
 }
+
 #win_wid_run_input {
 	position: absolute;
 	width: 272px;
 	right: 12px;
 	top: 66px;
 }
+
 #win_wid_run_obutton {
 	position: absolute;
 	width: 75px;
@@ -96,6 +114,7 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	font-family: "Microsoft Sans Serif";
 	font-size: 8pt;
 }
+
 .win_wid_run_cbutton {
 	position: absolute;
 	width: 75px;
@@ -105,6 +124,7 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	font-family: "Microsoft Sans Serif";
 	font-size: 8pt;
 }
+
 .win_wid_run_bbutton {
 	position: absolute;
 	height: 23px;
@@ -114,13 +134,16 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	font-family: "Microsoft Sans Serif";
 	font-size: 8pt;
 }
+
 /* WINVER DIALOG */
+
 #win_wid_winver_container {
 	width: 100%;
 	height: 100%;
 	background-color: #C0C0C0;
 	cursor: default;
 }
+
 .win_wid_winver_text {
 	position: absolute;
 	font-family: "Microsoft Sans Serif";
@@ -128,17 +151,21 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	width: 100%;
 	text-align: center;
 }
+
 #win_wid_winver_name {
 	top: 11px;
 }
+
 #win_wid_winver_icon {
 	position: absolute;
 	left: 141px;
 	top: 36px;
 }
+
 #win_wid_winver_copy {
 	top: 79px;
 }
+
 #win_wid_winver_ok {
 	position: absolute;
 	width: 48px;
@@ -146,7 +173,9 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	bottom: 8px;
 	left: 126px;
 }
+
 /* error dialog */
+
 .win_wid_error_container {
 	width: 100%;
 	height: 100%;
@@ -154,30 +183,41 @@ WARNING: All CSS in this document will run ROOT LEVEL in the emulator.
 	cursor: default;
 	position: absolute;
 }
+
 .win_wid_error_contcon {
 	position: relative;
 	width: 90%;
 	height: 100%;
 }
-.win_wid_error_icondiv {
-	
-}
+
+/* .win_wid_error_icondiv {} */
+
 .win_wid_error_icon {
 	position: absolute;
-	left: 10px;
-	top: 20px;
-	width: 32px;
-	height: 32px;
+	left: 20px;
+	top: 30px;
+	width: 40px;
+	height: 40px;
 }
+
 .win_wid_error_text {
-	height: 100%;
-	padding-left: 62px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	font-family: "Microsoft Sans Serif";
-	font-size: 8pt;
-	word-wrap: normal;
+	padding-top: 25px;
+	font-size: 100%;
+	font-family: 'Consolas';
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
 }
+
+.win_wid_error_close {
+	font-family: 'Consolas';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	width: 75px;
+	height: 23px;
+}
+
 .win_wid_error_buttoncont {
 	position: absolute;
 	bottom: 0px;
